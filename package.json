@@ -1,6 +1,6 @@
 {
   "name": "use-debounced-effect-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "useEffect hook from ReactJS debounced!",
   "author": "pedro-lb",
   "license": "MIT",
