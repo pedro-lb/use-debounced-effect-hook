@@ -10,17 +10,39 @@
 npm install --save use-debounced-effect-hook
 ```
 
+or
+
+```bash
+yarn add use-debounced-effect-hook
+```
+
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-import { useMyHook } from 'use-debounced-effect-hook'
+import useDebouncedEffect from 'use-debounced-effect-hook'
 
-const Example = () => {
-  const example = useMyHook()
+const App = () => {
+  const [search, setSearch] = useState("");
+
+  const searchInApi = (searchValue) => {
+    // Do your API request here
+  };
+
+  useDebouncedEffect(
+    () => searchInApi(searchValue),
+    [ search ],
+    1000, // The debounce delay
+  );
+
   return (
-    <div>{example}</div>
+    <>
+      <input
+        onChange={({target: { value }}) => setSearch(value)}
+        type="text"
+      />
+    </>
   )
 }
 ```
