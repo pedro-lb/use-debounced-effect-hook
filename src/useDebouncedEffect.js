@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import useDebounce from "./useDebounce";
 
 /**
@@ -13,8 +13,11 @@ export default function useDebouncedEffect(
   debounceTime = 0,
 ) {
   const debouncedDeps = useDebounce(deps, debounceTime);
+  const debouncedDepsRef = useRef(debouncedDeps);
 
-  useEffect(() => {
-    effect();
-  }, debouncedDeps);
+  debouncedDepsRef.current = debouncedDeps;
+
+  useEffect(effect, [
+    ...debouncedDepsRef.current,
+  ]);
 }
