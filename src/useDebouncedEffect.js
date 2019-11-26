@@ -7,7 +7,7 @@ import useDebounce from "./useDebounce";
  * @param {Objects to listen for changes.} deps
  * @param {Debounce time.} debounceTime
  */
-export default function useWindowSize(
+export default function useDebouncedEffect(
   effect = () => {},
   deps = [],
   debounceTime = 0,
