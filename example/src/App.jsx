@@ -24,8 +24,11 @@ const App = () => {
       <input type="text" className="input m-t-20" value={inputValue} onChange={handleInputChange} />
 
       <p className="m-t-20">
-        This value will change with a debounce of 2 seconds:
-        {debouncedValue}
+        This value below will change with a debounce of 2 seconds.
+      </p>
+
+      <p className="m-t-20">
+        {debouncedValue || '-'}
       </p>
     </div>
   );
