@@ -27,15 +27,15 @@ const App = () => {
   const [search, setSearch] = useState("");
 
   const searchInApi = (searchValue) => {
-    // Do your API request here.
+    // Do your API request here.
   };
 
-  // This will only fire useEffect once in 1s (1000ms) when search changes.
-  // This is done to prevent unnecessary code execution repeatedly.
+  // This will only fire useEffect once in 1s (1000ms) when search changes.
+  // This is done to prevent unnecessary code execution repeatedly.
   useDebouncedEffect(
     () => searchInApi(search),
     [ search ],
-    1000, // The debounce delay
+    1000, // The debounce delay
   );
 
   return (
