@@ -1,3 +1,3 @@
-import useDebouncedEffect from "./useDebouncedEffect";
+import useDebouncedEffect from './useDebouncedEffect';
 
 export default useDebouncedEffect;

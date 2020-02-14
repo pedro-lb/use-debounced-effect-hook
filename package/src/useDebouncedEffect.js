@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import useDebounce from "./useDebounce";
+import { useEffect, useRef } from 'react';
+import useDebounce from './useDebounce';
 
 /**
  * Hook that works just like useEffect, but debounced.
