@@ -1,0 +1,19 @@
+{
+  "name": "use-debounced-effect-hook-example",
+  "homepage": "https://pedro-lb.github.io/use-debounced-effect-hook",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "use-debounced-effect-hook": "link:..",
+    "react": "link:../package/node_modules/react",
+    "react-dom": "link:../package/node_modules/react-dom",
+    "react-scripts": "^1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
