@@ -5,9 +5,9 @@
   "author": "pedro-lb",
   "license": "MIT",
   "repository": "pedro-lb/use-debounced-effect-hook",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
+  "main": "../dist/index.js",
+  "module": "../dist/index.es.js",
+  "jsnext:main": "../dist/index.es.js",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
@@ -18,7 +18,8 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
-    "predeploy": "cd example && yarn install && yarn run build",
+    "example": "cd ../example && yarn start",
+    "predeploy": "cd ../example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
