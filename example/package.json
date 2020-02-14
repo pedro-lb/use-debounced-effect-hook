@@ -9,7 +9,7 @@
     "react": "link:../package/node_modules/react",
     "react-dom": "link:../package/node_modules/react-dom",
     "react-scripts": "^1.1.4",
-    "use-debounced-effect-hook": "link:.."
+    "use-debounced-effect-hook": "link:../package/src"
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint ./src --ext .js,.jsx",
