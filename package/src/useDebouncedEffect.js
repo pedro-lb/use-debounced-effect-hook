@@ -34,7 +34,6 @@ function useDeepCompareMemoize(value) {
  * @param {Debounce time.} debounceTime
  */
 export default function useDebouncedEffect(
-  id,
   effect = () => {},
   deps = [],
   debounceTime = 0,
