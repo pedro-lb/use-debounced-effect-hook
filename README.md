@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/use-debounced-effect-hook.svg)](https://www.npmjs.com/package/use-debounced-effect-hook) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+This implements a debounce action to the `useEffect` hook we all know, making it possible to execute debounced effects!
+
+If you want to run some code everytime one variable changes, but not repeatedly (e.g. wait for the user to finish typing), this is the package for you =).
+
 ## Install
 
 ```bash
