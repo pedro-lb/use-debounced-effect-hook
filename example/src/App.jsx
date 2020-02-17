@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -7,6 +7,8 @@ import useDebouncedEffect from 'use-debounced-effect-hook';
 import useStyles from './styles';
 
 const App = () => {
+  const renderCountRef = useRef(0);
+
   const [inputValue, setInputValue] = useState('');
   const [inputValue2, setInputValue2] = useState('');
 
@@ -30,12 +32,30 @@ const App = () => {
 
   const classes = useStyles();
 
+  renderCountRef.current += 1;
+
   return (
     <Grid container spacing={3} className={classes.centerContent}>
       <Grid item xs={12} className={classes.marginTop5}>
         <Typography variant="h3">
           Use Debounced Effect!
           <span role="img" aria-label="awesome"> ⚛️</span>
+        </Typography>
+      </Grid>
+
+      <Grid item xs={12} className={[classes.marginTop5, classes.centerContent]}>
+        <Typography variant="h5">
+          useEffect hook from ReactJS debounced!
+        </Typography>
+
+        <Typography variant="subtitle1" className={classes.marginTop2}>
+          You can use as many useDebouncedEffects as you like,
+          there will be no unnecessary re-renders.
+        </Typography>
+
+        <Typography variant="subtitle1" className={classes.marginTop2}>
+          Render count:
+          {renderCountRef.current}
         </Typography>
       </Grid>
 
