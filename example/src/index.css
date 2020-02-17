@@ -1,14 +1,3 @@
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.m-t-20 {
-  margin-top: 20px;
-}
-
 .input {
   width: 200px;
   height: 20px;
