@@ -66,5 +66,9 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-url": "^2.1.0"
+  },
+  "dependencies": {
+    "lodash.isequal": "^4.5.0",
+    "use-debounce": "^3.3.0"
   }
 }

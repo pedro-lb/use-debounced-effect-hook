@@ -1,5 +1,31 @@
 import { useEffect, useRef } from 'react';
-import useDebounce from './useDebounce';
+import { useDebounce } from 'use-debounce';
+import isEqual from 'lodash.isequal';
+
+/**
+ * Performs a deep comparison between two objects.
+ * @param {*} a Object A.
+ * @param {*} b Object B.
+ */
+function deepCompareEquals(a, b) {
+  return isEqual(a, b);
+}
+
+/**
+ * Performs a deep memoized comparison between one object and its previous value.
+ * @param {*} value Value for comparison.
+ */
+function useDeepCompareMemoize(value) {
+  const ref = useRef();
+  // it can be done by using useMemo as well
+  // but useRef is rather cleaner and easier
+
+  if (!deepCompareEquals(value, ref.current)) {
+    ref.current = value;
+  }
+
+  return ref.current;
+}
 
 /**
  * Hook that works just like useEffect, but debounced.
@@ -8,16 +34,14 @@ import useDebounce from './useDebounce';
  * @param {Debounce time.} debounceTime
  */
 export default function useDebouncedEffect(
+  id,
   effect = () => {},
   deps = [],
   debounceTime = 0,
 ) {
-  const debouncedDeps = useDebounce(deps, debounceTime);
-  const debouncedDepsRef = useRef(debouncedDeps);
+  const [debouncedDeps] = useDebounce(deps, debounceTime, {
+    equalityFn: isEqual,
+  });
 
-  debouncedDepsRef.current = debouncedDeps;
-
-  useEffect(effect, [
-    ...debouncedDepsRef.current,
-  ]);
+  useEffect(effect, useDeepCompareMemoize(debouncedDeps));
 }
