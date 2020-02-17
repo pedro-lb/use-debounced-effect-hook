@@ -7,7 +7,7 @@ import isEqual from 'lodash.isequal';
  * @param {*} a Object A.
  * @param {*} b Object B.
  */
-function deepCompareEquals(a, b) {
+function deepCompareEquals(a: any, b: any) {
   return isEqual(a, b);
 }
 
@@ -15,7 +15,7 @@ function deepCompareEquals(a, b) {
  * Performs a deep memoized comparison between one object and its previous value.
  * @param {*} value Value for comparison.
  */
-function useDeepCompareMemoize(value) {
+function useDeepCompareMemoize(value: any) {
   const ref = useRef();
 
   if (!deepCompareEquals(value, ref.current)) {
@@ -31,10 +31,10 @@ function useDeepCompareMemoize(value) {
  * @param {Objects to listen for changes.} deps
  * @param {Debounce time.} debounceTime
  */
-export default function useDebouncedEffect(
+function useDebouncedEffect(
   effect = () => {},
-  deps = [],
-  debounceTime = 0,
+  deps: [] = [],
+  debounceTime: number = 0,
 ) {
   const [debouncedDeps] = useDebounce(deps, debounceTime, {
     equalityFn: isEqual,
@@ -42,3 +42,5 @@ export default function useDebouncedEffect(
 
   useEffect(effect, useDeepCompareMemoize(debouncedDeps));
 }
+
+export default useDebouncedEffect;
