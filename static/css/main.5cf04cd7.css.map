@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,OACE,YACA,WAAa","file":"static/css/main.5cf04cd7.css","sourcesContent":[".input {\n  width: 200px;\n  height: 20px;\n}\n\n\n\n// WEBPACK FOOTER //\n// ./src/index.css"],"sourceRoot":""}
