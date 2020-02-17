@@ -14,17 +14,24 @@ You can check this hook running [in this page](https://pedro-lb.github.io/use-de
 
 ## Install
 
-```bash
-npm install --save use-debounced-effect-hook
-```
+You can use `yarn` or `npm`. Whatever floats your boat =).
 
-or
+
+### Yarn
 
 ```bash
 yarn add use-debounced-effect-hook
 ```
 
+### npm
+
+```bash
+npm install --save use-debounced-effect-hook
+```
+
 ## Usage
+
+You can also check [example](https://github.com/pedro-lb/use-debounced-effect-hook/tree/master/example) in this repo for more code!
 
 ```jsx
 import React, { useState } from 'react'
@@ -57,10 +64,15 @@ const App = () => {
 }
 ```
 
+## Contributing
+
+Pull requests are welcome! If you have any feedback, issue or suggestion, feel free to open [a new issue](https://github.com/pedro-lb/formup/issues/new) so we can talk about it 💬.
+
 ## License
 
 MIT © [pedro-lb](https://github.com/pedro-lb)
 
----
+### Special Thanks
 
-This hook is created using [create-react-hook](https://github.com/hermanya/create-react-hook).
+- Thank you to [github.com/hermanya](https://github.com/hermanya/create-react-hook) for the amazing lib [create-react-hook](https://github.com/hermanya/create-react-hook).
+- Thank you to [github.com/xnimorz](https://github.com/xnimorz) for the amazing lib [use-debounce](https://github.com/xnimorz/use-debounce).
