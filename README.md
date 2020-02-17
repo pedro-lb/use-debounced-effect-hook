@@ -8,6 +8,10 @@ This implements a debounce action to the `useEffect` hook we all know, making it
 
 If you want to run some code everytime one variable changes, but not repeatedly (e.g. wait for the user to finish typing), this is the package for you =).
 
+## Online Example
+
+You can check this hook running [in this page](https://pedro-lb.github.io/use-debounced-effect-hook/).
+
 ## Install
 
 ```bash
