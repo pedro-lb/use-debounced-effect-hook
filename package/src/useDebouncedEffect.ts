@@ -33,7 +33,7 @@ function useDeepCompareMemoize(value: any) {
  */
 function useDebouncedEffect(
   effect = () => {},
-  deps: [] = [],
+  deps: any[] = [],
   debounceTime: number = 0,
 ) {
   const [debouncedDeps] = useDebounce(deps, debounceTime, {
