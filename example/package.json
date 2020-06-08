@@ -2,7 +2,6 @@
   "name": "use-debounced-effect-hook-example",
   "homepage": "https://pedro-lb.github.io/use-debounced-effect-hook",
   "version": "0.0.0",
-  "main": "f.jsx",
   "license": "MIT",
   "private": true,
   "dependencies": {
